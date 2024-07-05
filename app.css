@@ -1,0 +1,19 @@
+#maincontainer{
+    background-color: rgb(129, 24, 24);
+    border-radius: 15px;
+    padding-top: 10px;
+    color: whitesmoke;
+
+}
+
+#head{
+text-align: center;
+}
+
+th, td {
+    border-radius: 5px;
+  }
+ 
+tbody{
+    height: 43px;
+}

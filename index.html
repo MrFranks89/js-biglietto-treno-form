@@ -8,54 +8,58 @@
     rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
     crossorigin="anonymous">
+    <link rel="stylesheet" href="app.css">
 </head>
 <body>
     <main>
-        <section class="py-5">
+        <div class="container" id="maincontainer">
+            <section class="py-5">
+                <div class="container" id="head">
+                    <h1>Calcola il tuo biglietto!</h1>
+                </div>
+            </section>
             <div class="container">
-                <h1>Calcola il tuo biglietto!</h1>
+                <form id="form-biglietto" class="row g-3">
+                    <div class="col-md-6">
+                        <label for="km" class="form-label">Km</label>
+                        <input type="text" class="form-control" id="km" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="age" class="form-label">Età</label>
+                        <select
+                            id="age"
+                            class="form-select"
+                            aria-label="Default select example"
+                        >
+                            <option selected value="">-- seleziona --</option>
+                            <option value="u18"> -18 </option>
+                            <option value="normale"></option>
+                            <option value="o65"> +65 </option>
+                        </select>
+                    </div>
+                    <div class="col-12 pb-4">
+                        <button type="submit" class="btn btn-light">Calcola</button>
+                    </div>
+                </form>
             </div>
-        </section>
-        <div class="container">
-            <form id="form-biglietto" class="row g-3">
-                <div class="col-md-6">
-                    <label for="km" class="form-label">Km</label>
-                    <input type="text" class="form-control" id="km" />
+
+            <section>
+                <div class="container mb-5 pb-5">
+                    <table class="table w-25 h-2">
+                        <thead>
+                            <tr>
+                                <th>Costo biglietto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="ticket-output">  </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="col-md-6">
-                    <label for="age" class="form-label">Età</label>
-                    <select
-                        id="age"
-                        class="form-select"
-                        aria-label="Default select example"
-                    >
-                        <option selected value="">-- seleziona --</option>
-                        <option value="u18"> -18 </option>
-                        <option value="normale"></option>
-                        <option value="o65"> +65 </option>
-                    </select>
-                </div>
-                <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Calcola</button>
-                </div>
-            </form>
+            </section>      
         </div>
-        <section>
-            <div class="container">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Costo biglietto</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td id="Ticket-output">--</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
     </main>
 
 

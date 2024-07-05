@@ -31,17 +31,17 @@ formElement.addEventListener('submit', function (event) {
         
     console.log(
         km, 
-        prezzoBase, 
+        prezzoBase.toFixed(2), 
         selectedAge, 
         sconto)
 
     let prezzoFinale = prezzoBase - sconto
 
     console.log(
-        prezzoFinale, typeof prezzoFinale
+        prezzoFinale.toFixed(2)
     )
 
-    ticketOutputElement.innerHTML = prezzoFinale + ' €'
+    ticketOutputElement.innerHTML = prezzoFinale.toFixed(2) + ' €'
 
 
 })
